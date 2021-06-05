@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:diitstudentportal/Screens/DashBoard.dart';
+import 'package:diitstudentportal/Screens/ForgetPassPage.dart';
 import 'package:diitstudentportal/Screens/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_ns/liquid_progress_indicator.dart';
@@ -20,8 +22,12 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   void initState() {
     
     super.initState();
-    Timer(Duration(seconds: 5), ()=> Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> LoginPage()), (route) => false));
-
+    Timer(
+        Duration(seconds: 5),
+        () => Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => ForgetPassPage(m )),
+            (route) => false));
   }
 
   @override
