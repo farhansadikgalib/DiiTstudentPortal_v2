@@ -35,8 +35,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   liquid_progress_indicator_ns: ^1.0.0
-  flutter_login: ^2.0.0-nullsafety.0
   font_awesome_flutter: ^9.0.0
+  shared_preferences: ^2.0.6
+  bottom_navy_bar: ^6.0.0
+  carousel_slider: ^4.0.0-nullsafety.0
 
 dev_dependencies:
   flutter_test:

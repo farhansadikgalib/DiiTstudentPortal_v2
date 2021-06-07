@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:diitstudentportal/Screens/DashBoard.dart';
-import 'package:diitstudentportal/Screens/ForgetPassPage.dart';
-import 'package:diitstudentportal/Screens/LoginPage.dart';
+import 'package:diitstudentportal/Screens/Dashboard/DashBoardPage.dart';
+import 'package:diitstudentportal/Screens/Signing_all/ForgetPassPage.dart';
+import 'package:diitstudentportal/Screens/Signing_all/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_ns/liquid_progress_indicator.dart';
 
@@ -26,7 +26,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
         Duration(seconds: 5),
         () => Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: (context) => ForgetPassPage()),
+            MaterialPageRoute(builder: (context) => LoginPage()),
             (route) => false));
   }
 

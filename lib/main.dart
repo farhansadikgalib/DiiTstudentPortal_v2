@@ -1,4 +1,4 @@
-import 'package:diitstudentportal/Screens/SplashScreen.dart';
+import 'package:diitstudentportal/Screens/SplashScreen/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
