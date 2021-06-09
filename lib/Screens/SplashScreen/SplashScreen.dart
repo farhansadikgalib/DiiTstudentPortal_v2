@@ -4,6 +4,7 @@ import 'package:diitstudentportal/Screens/Signing_all/ForgetPassPage.dart';
 import 'package:diitstudentportal/Screens/Signing_all/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_ns/liquid_progress_indicator.dart';
+import 'package:shimmer/shimmer.dart';
 
 
 class SplashScreenPage extends StatefulWidget {
@@ -12,12 +13,7 @@ class SplashScreenPage extends StatefulWidget {
   @override
   _SplashScreenPageState createState() => _SplashScreenPageState();
 }
-
-
-
 class _SplashScreenPageState extends State<SplashScreenPage> {
-
-
   @override
   void initState() {
     
@@ -34,6 +30,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(1, 60, 88, 1),
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,

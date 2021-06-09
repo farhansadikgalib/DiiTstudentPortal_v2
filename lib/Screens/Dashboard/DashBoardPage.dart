@@ -72,33 +72,3 @@ class _DashboardPageState extends State<DashboardPage> {
 
 
 
-
-
-
-
-
-// import 'package:flutter/material.dart';
-//
-// class Weather_Status extends StatefulWidget {
-//   const Weather_Status({Key? key}) : super(key: key);
-//
-//   @override
-//   _Weather_StatusState createState() => _Weather_StatusState();
-// }
-//
-// class _Weather_StatusState extends State<Weather_Status> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//
-//       height: 180,
-//       width: 350,
-//
-//       color: Color.fromRGBO(0, 220, 168 ,1),
-//
-//
-//
-//
-//     );
-//   }
-// }

@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: <Widget>[
 
-                      Image.asset("assets/applogo.png",height: 150,width:225 ,),
+                      Image.asset("assets/portallogo.png",height: 150,width:225 ,),
 
 
                       SizedBox(height: 25,),
