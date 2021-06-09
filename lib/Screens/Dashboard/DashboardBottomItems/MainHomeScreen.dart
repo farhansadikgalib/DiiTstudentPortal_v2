@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:getwidget/size/gf_size.dart';
-import 'package:getwidget/types/gf_button_type.dart';
 import 'package:shimmer/shimmer.dart';
 
 class MainHomeScreen extends StatefulWidget {
