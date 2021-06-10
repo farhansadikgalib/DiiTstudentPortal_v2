@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 
 class MainHomeScreen extends StatefulWidget {
@@ -11,6 +14,11 @@ class MainHomeScreen extends StatefulWidget {
 }
 
 class _MainHomeScreenState extends State<MainHomeScreen> {
+
+  // List<Marker> myMarker = [];
+
+
+
   final List<String> imgList = [
     "assets/rsz_banner2.png",
     "assets/rsz_banner3.png",
@@ -18,11 +26,11 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     "assets/rsz_2diit.png"
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(1, 60, 88, 1),
-        appBar: AppBar(
+       appBar: AppBar(
           backgroundColor: Color.fromRGBO(1, 60, 88, 1),
           centerTitle: true,
           title: Shimmer.fromColors(
@@ -286,17 +294,12 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   ),
                 ),
 
-
-
-
                 SizedBox(
                   height: 10,
                 ),
 
                 GridView(
-                    // scrollDirection: Axis.vertical,           //default
-                    // reverse: false,                           //default
-                    // controller: ScrollController(),
+
                     primary: false,
                     shrinkWrap: true,
                     padding: EdgeInsets.all(10.0),
@@ -305,14 +308,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                         crossAxisCount: 2,
                         mainAxisSpacing: 12.0,
                         crossAxisSpacing: 12.0),
-                    // addAutomaticKeepAlives: true,             //default
-                    // addRepaintBoundaries: true,               //default
-                    // addSemanticIndexes: true,                 //default
-                    // semanticChildCount: 0,
-                    // cacheExtent: 0.0,
-                    // dragStartBehavior: DragStartBehavior.start,
-                    // clipBehavior: Clip.hardEdge,
-                    // keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
+
                     children: [
 
 
@@ -435,6 +431,17 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     ]                     // List of Widgets
                 ),
 
+                // Container(
+                //   height: 300,
+                //   child: GoogleMap(
+                //       initialCameraPosition:
+                //           CameraPosition(target: LatLng(23.7506, 90.3814),zoom: 18),
+                //   onTap: _handleMap,
+                //   ),
+                //
+                //
+                // )
+
 
 
 
@@ -444,4 +451,26 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           ),
         ));
   }
-}
+
+ // _handleMap(LatLng Positionx){
+
+    // setState(() {
+    //   myMarker = [];
+    //   myMarker.add(
+    //     // ignore: file_names
+    //     Marker(markerId: Positionx.toString()),position: Positionx),
+    //
+    //
+    //   );
+    // });
+
+
+
+  }
+
+
+
+
+
+
+
