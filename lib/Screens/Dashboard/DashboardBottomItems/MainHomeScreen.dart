@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:diitstudentportal/Screens/Sub%20Dashboard/Question_Bank.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -302,18 +303,18 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
                     primary: false,
                     shrinkWrap: true,
-                    padding: EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(20.0),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
 
                         crossAxisCount: 2,
-                        mainAxisSpacing: 12.0,
-                        crossAxisSpacing: 12.0),
+                        mainAxisSpacing: 15.0,
+                        crossAxisSpacing: 15.0),
 
                     children: [
 
 
                       Container(
-                        color: Color.fromRGBO(197, 197, 255, 1),
+                        color: Color.fromRGBO(245,222,179,1),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -340,7 +341,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
                       ),
                       Container(
-                        color: Color.fromRGBO(197, 197, 255, 1),
+                        color: Color.fromRGBO(245,222,179,1),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -367,7 +368,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
                       ),
                       Container(
-                        color: Color.fromRGBO(197, 197, 255, 1),
+                        color: Color.fromRGBO(245,222,179,1),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -376,7 +377,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                             Image.asset("assets/ic_club.png",height: 100,width: 100,),
                             SizedBox(height: 5,),
 
-                            Text("Question Bank",style: TextStyle(
+                            Text("Clubs",style: TextStyle(
                                 fontSize: 18.0,
                                 fontFamily: "Baloo",
                                 color: Color.fromRGBO(113, 8, 151, 1)
@@ -394,32 +395,37 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
                       ),
 
-                      Container(
-                        color: Color.fromRGBO(197, 197, 255, 1),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                      InkWell(
+                        onTap:(){
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>QuestionBank()));
+                        },
+                        child: Container(
+                          color: Color.fromRGBO(245,222,179,1),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
 
-                            Image.asset("assets/ic_questionbank.png",height: 100,width: 100,),
-                            SizedBox(height: 5,),
+                              Image.asset("assets/ic_questionbank.png",height: 100,width: 100,),
+                              SizedBox(height: 5,),
 
-                            Text("Question Bank",style: TextStyle(
-                                fontSize: 18.0,
-                                fontFamily: "Baloo",
-                                color: Color.fromRGBO(113, 8, 151, 1)
-                            ),)
+                              Text("Question Bank",style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontFamily: "Baloo",
+                                  color: Color.fromRGBO(113, 8, 151, 1)
+                              ),)
 
 
-                          ],
+                            ],
+
+
+
+                          ),
+
 
 
 
                         ),
-
-
-
-
                       ),
 
 
