@@ -55,9 +55,6 @@ class _QuestionBankState extends State<QuestionBank> {
 
 
                     ],
-
-
-
                   ),
                 ),
                 Card(
