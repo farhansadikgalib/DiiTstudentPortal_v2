@@ -93,7 +93,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                         "Raining",
                                         style: TextStyle(
                                             fontFamily: "azonix",
-                                            fontSize: 24,
+                                            fontSize: 22,
                                             fontWeight: FontWeight.bold),
                                       )),
                                     ],
@@ -106,7 +106,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "Sunset:",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             fontFamily: "Poppins"),
                                       ),
                                       SizedBox(
@@ -115,7 +115,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "06:41 PM",
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
@@ -129,7 +129,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "Sunrise:",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             fontFamily: "Poppins"),
                                       ),
                                       SizedBox(
@@ -138,7 +138,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "04.55 AM",
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
@@ -152,7 +152,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "Current Temp:",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             fontFamily: "Poppins"),
                                       ),
                                       SizedBox(
@@ -161,7 +161,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "27°C",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.w500),
                                       ),
                                     ],
@@ -174,7 +174,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "Current Time:",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             fontFamily: "Poppins"),
                                       ),
                                       SizedBox(
@@ -183,7 +183,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "12:19 AM",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.w500),
                                       ),
                                     ],
@@ -196,7 +196,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "Today’s Date :",
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           fontFamily: "Poppins",
                                         ),
                                       ),
@@ -206,7 +206,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       Text(
                                         "31 MAY 2021",
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.w500),
                                       ),
                                     ],
@@ -217,12 +217,15 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                           ),
                           Row(
                             children: [
-                              Container(
-                                  child: Image.asset(
-                                "assets/weather.png",
-                                height: 75,
-                                width: 75,
-                              )),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                    child: Image.asset(
+                                  "assets/weather.png",
+                                  height: 60,
+                                  width: 60,
+                                )),
+                              ),
                             ],
                           )
                         ],
@@ -303,14 +306,14 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
                     primary: false,
                     shrinkWrap: true,
-                    padding: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(15),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
 
                         crossAxisCount: 2,
-                        mainAxisSpacing: 15.0,
-                        crossAxisSpacing: 15.0),
+                        mainAxisSpacing: 10.0,
+                        crossAxisSpacing: 10.0),
 
-                    children: [
+                    children:<Widget> [
 
 
                       Container(
@@ -320,7 +323,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
 
-                            Image.asset("assets/ic_attendance.png",height: 100,width: 100,),
+                            Image.asset("assets/ic_attendance.png",height: 75,width: 75,),
                             SizedBox(height: 5,),
 
                             Text("Attendance",style: TextStyle(
@@ -347,7 +350,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
 
-                            Image.asset("assets/ic_routine.png",height: 100,width: 100,),
+                            Image.asset("assets/ic_routine.png",height: 75,width: 75,),
                             SizedBox(height: 5,),
 
                             Text("Class Routine",style: TextStyle(
@@ -374,7 +377,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
 
-                            Image.asset("assets/ic_club.png",height: 100,width: 100,),
+                            Image.asset("assets/ic_club.png",height: 75,width: 75,),
                             SizedBox(height: 5,),
 
                             Text("Clubs",style: TextStyle(
@@ -406,7 +409,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
 
-                              Image.asset("assets/ic_questionbank.png",height: 100,width: 100,),
+                              Image.asset("assets/ic_questionbank.png",height: 75,width: 75,),
                               SizedBox(height: 5,),
 
                               Text("Question Bank",style: TextStyle(

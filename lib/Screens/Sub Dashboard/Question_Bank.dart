@@ -1,4 +1,6 @@
+import 'package:diitstudentportal/Screens/Sub%20Dashboard/QuestionBank/Every_Students_QuestionBank.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class QuestionBank extends StatefulWidget {
   const QuestionBank({Key? key}) : super(key: key);
@@ -36,87 +38,37 @@ class _QuestionBankState extends State<QuestionBank> {
               children: [
 
 
-                Card(
-                 elevation: 20,
-                  color: Color.fromRGBO(176,196,222, 1),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-
-                      Image.asset("assets/ic_attendance.png",height: 100,width: 100,),
-                      SizedBox(height: 5,),
-
-                      Text("CSE",style: TextStyle(
-                          fontSize: 18.0,
-                          fontFamily: "Baloo",
-                          color: Color.fromRGBO(113, 8, 151, 1)
-                      ),)
-
-
-                    ],
-                  ),
-                ),
-                Card(
-                  elevation: 20,
-                  color: Color.fromRGBO(176,196,222, 1),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-
-                      Image.asset("assets/ic_routine.png",height: 100,width: 100,),
-                      SizedBox(height: 5,),
-
-                      Text("BBA",style: TextStyle(
-                          fontSize: 18.0,
-                          fontFamily: "Baloo",
-                          color: Color.fromRGBO(113, 8, 151, 1)
-                      ),)
-
-
-                    ],
-
-
-
-                  ),
-
-
-
-
-                ),
-                Card(
-                  color: Color.fromRGBO(176,196,222, 1),
-                  elevation: 20,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-
-                      Image.asset("assets/ic_club.png",height: 100,width: 100,),
-                      SizedBox(height: 5,),
-
-                      Text("BTHM",style: TextStyle(
-                          fontSize: 18.0,
-                          fontFamily: "Baloo",
-                          color: Color.fromRGBO(113, 8, 151, 1)
-                      ),)
-
-
-                    ],
-
-
-
-                  ),
-
-
-
-
-                ),
-
                 InkWell(
                   onTap:(){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>QuestionBank()));
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
+                  },
+
+                  child: Card(
+                   elevation: 20,
+                    color: Color.fromRGBO(176,196,222, 1),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+
+                        Image.asset("assets/ic_attendance.png",height: 75,width: 75,),
+                       // Icon(FontAwesomeIcons.laptop),
+                        SizedBox(height: 5,),
+
+                        Text("CSE",style: TextStyle(
+                            fontSize: 18.0,
+                            fontFamily: "Baloo",
+                            color: Color.fromRGBO(113, 8, 151, 1)
+                        ),)
+
+
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap:(){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
                   },
                   child: Card(
                     elevation: 20,
@@ -126,7 +78,74 @@ class _QuestionBankState extends State<QuestionBank> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
 
-                        Image.asset("assets/ic_questionbank.png",height: 100,width: 100,),
+                        Image.asset("assets/ic_routine.png",height: 75,width: 75,),
+                        SizedBox(height: 5,),
+
+                        Text("BBA",style: TextStyle(
+                            fontSize: 18.0,
+                            fontFamily: "Baloo",
+                            color: Color.fromRGBO(113, 8, 151, 1)
+                        ),)
+
+
+                      ],
+
+
+
+                    ),
+
+
+
+
+                  ),
+                ),
+                InkWell(
+                  onTap:(){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
+                  },
+                  child: Card(
+                    color: Color.fromRGBO(176,196,222, 1),
+                    elevation: 20,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+
+                        Image.asset("assets/ic_club.png",height: 75,width: 75,),
+                        SizedBox(height: 5,),
+
+                        Text("BTHM",style: TextStyle(
+                            fontSize: 18.0,
+                            fontFamily: "Baloo",
+                            color: Color.fromRGBO(113, 8, 151, 1)
+                        ),)
+
+
+                      ],
+
+
+
+                    ),
+
+
+
+
+                  ),
+                ),
+
+                InkWell(
+                  onTap:(){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
+                  },
+                  child: Card(
+                    elevation: 20,
+                    color: Color.fromRGBO(176,196,222, 1),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+
+                        Image.asset("assets/ic_questionbank.png",height: 75,width: 75,),
                         SizedBox(height: 5,),
 
                         Text("MBA",style: TextStyle(
