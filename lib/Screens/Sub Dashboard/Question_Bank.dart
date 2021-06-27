@@ -10,6 +10,12 @@ class QuestionBank extends StatefulWidget {
 }
 
 class _QuestionBankState extends State<QuestionBank> {
+  String _cse = 'CSE QUESTION BANK';
+  String _bba = 'BBA QUESTION BANK';
+  String _bthm = 'BTHM QUESTION BANK';
+  String _mba = 'MBA QUESTION BANK';
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,7 +107,9 @@ class _QuestionBankState extends State<QuestionBank> {
                 ),
                 InkWell(
                   onTap:(){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
+                    Navigator.push(context,MaterialPageRoute(builder: (context){
+                      return EveryStudentsQuestionBank(message:_cse);
+                    }));
                   },
                   child: Card(
                     color: Color.fromRGBO(176,196,222, 1),

@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-class EveryStudentsQuestionBank extends StatefulWidget {
-  const EveryStudentsQuestionBank({Key? key}) : super(key: key);
-
-  @override
-  _EveryStudentsQuestionBankState createState() => _EveryStudentsQuestionBankState();
-}
-
-class _EveryStudentsQuestionBankState extends State<EveryStudentsQuestionBank> {
 
 
+class EveryStudentsQuestionBank extends StatelessWidget {
+  const EveryStudentsQuestionBank({Key? key,  required this.message,}) : super(key: key);
+  final String message;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +20,7 @@ class _EveryStudentsQuestionBankState extends State<EveryStudentsQuestionBank> {
           child: Column(
             children: [
               Text(
-                'Question Bank',
+                '${Widget.}',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 22.0,
@@ -480,14 +475,10 @@ class _EveryStudentsQuestionBankState extends State<EveryStudentsQuestionBank> {
 
     );
 
-
   }
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
