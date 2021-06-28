@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Attendance/Attendance.dart';
+import 'package:diitstudentportal/Screens/Sub%20Dashboard/Clubs/All_Clubs_list.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/QuestionBank/Question_Bank.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -338,9 +339,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                 color: Color.fromRGBO(113, 8, 151, 1)
                               ),)
 
-
                             ],
-
 
 
                           ),
@@ -377,32 +376,39 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
 
                       ),
-                      Container(
-                        color: Color.fromRGBO(245,222,179,1),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                      InkWell(
 
-                            Image.asset("assets/ic_club.png",height: 75,width: 75,),
-                            SizedBox(height: 5,),
+                        onTap:(){
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Clubs()));
+                        },
 
-                            Text("Clubs",style: TextStyle(
-                                fontSize: 18.0,
-                                fontFamily: "Baloo",
-                                color: Color.fromRGBO(113, 8, 151, 1)
-                            ),)
+                        child: Container(
+                          color: Color.fromRGBO(245,222,179,1),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+
+                              Image.asset("assets/ic_club.png",height: 75,width: 75,),
+                              SizedBox(height: 5,),
+
+                              Text("Clubs",style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontFamily: "Baloo",
+                                  color: Color.fromRGBO(113, 8, 151, 1)
+                              ),)
 
 
-                          ],
+                            ],
+
+
+
+                          ),
+
 
 
 
                         ),
-
-
-
-
                       ),
 
                       InkWell(
