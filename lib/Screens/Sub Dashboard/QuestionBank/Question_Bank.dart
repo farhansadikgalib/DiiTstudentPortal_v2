@@ -46,8 +46,10 @@ class _QuestionBankState extends State<QuestionBank> {
 
                 InkWell(
                   onTap:(){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
-                  },
+                    Navigator.push(context,MaterialPageRoute(builder: (context){
+                      return EveryStudentsQuestionBank(message:_cse);
+
+                    }));                  },
 
                   child: Card(
                    elevation: 20,
@@ -74,8 +76,10 @@ class _QuestionBankState extends State<QuestionBank> {
                 ),
                 InkWell(
                   onTap:(){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
-                  },
+                    Navigator.push(context,MaterialPageRoute(builder: (context){
+                      return EveryStudentsQuestionBank(message:_bba);
+
+                    }));                  },
                   child: Card(
                     elevation: 20,
                     color: Color.fromRGBO(176,196,222, 1),
@@ -108,8 +112,10 @@ class _QuestionBankState extends State<QuestionBank> {
                 InkWell(
                   onTap:(){
                     Navigator.push(context,MaterialPageRoute(builder: (context){
-                      return EveryStudentsQuestionBank(message:_cse);
+                      return EveryStudentsQuestionBank(message:_bthm);
+
                     }));
+
                   },
                   child: Card(
                     color: Color.fromRGBO(176,196,222, 1),
@@ -143,8 +149,10 @@ class _QuestionBankState extends State<QuestionBank> {
 
                 InkWell(
                   onTap:(){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>EveryStudentsQuestionBank()));
-                  },
+                    Navigator.push(context,MaterialPageRoute(builder: (context){
+                      return EveryStudentsQuestionBank(message:_mba);
+
+                    }));                  },
                   child: Card(
                     elevation: 20,
                     color: Color.fromRGBO(176,196,222, 1),

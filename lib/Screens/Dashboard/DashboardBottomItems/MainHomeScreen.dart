@@ -1,6 +1,7 @@
 import 'dart:async';
 
-import 'package:diitstudentportal/Screens/Sub%20Dashboard/Question_Bank.dart';
+import 'package:diitstudentportal/Screens/Sub%20Dashboard/Attendance/Attendance.dart';
+import 'package:diitstudentportal/Screens/Sub%20Dashboard/QuestionBank/Question_Bank.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -316,32 +317,38 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     children:<Widget> [
 
 
-                      Container(
-                        color: Color.fromRGBO(245,222,179,1),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                      InkWell(
 
-                            Image.asset("assets/ic_attendance.png",height: 75,width: 75,),
-                            SizedBox(height: 5,),
+                        onTap:(){
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Attendance_system()));
+                        },
+                        child: Container(
+                          color: Color.fromRGBO(245,222,179,1),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
 
-                            Text("Attendance",style: TextStyle(
-                              fontSize: 18.0,
-                              fontFamily: "Baloo",
-                              color: Color.fromRGBO(113, 8, 151, 1)
-                            ),)
+                              Image.asset("assets/ic_attendance.png",height: 75,width: 75,),
+                              SizedBox(height: 5,),
+
+                              Text("Attendance",style: TextStyle(
+                                fontSize: 18.0,
+                                fontFamily: "Baloo",
+                                color: Color.fromRGBO(113, 8, 151, 1)
+                              ),)
 
 
-                          ],
+                            ],
+
+
+
+                          ),
+
 
 
 
                         ),
-
-
-
-
                       ),
                       Container(
                         color: Color.fromRGBO(245,222,179,1),

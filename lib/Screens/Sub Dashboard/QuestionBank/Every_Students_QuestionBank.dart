@@ -7,6 +7,8 @@ class EveryStudentsQuestionBank extends StatelessWidget {
   const EveryStudentsQuestionBank({Key? key,  required this.message,}) : super(key: key);
   final String message;
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,7 @@ class EveryStudentsQuestionBank extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                '${Widget.}',
+                '${message}',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 22.0,
