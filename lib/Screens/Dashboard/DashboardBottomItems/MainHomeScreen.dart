@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Attendance/Attendance.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Clubs/All_Clubs_list.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/QuestionBank/Question_Bank.dart';
@@ -7,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:intl/intl.dart';
 import 'package:shimmer/shimmer.dart';
 
 class MainHomeScreen extends StatefulWidget {
@@ -18,8 +18,16 @@ class MainHomeScreen extends StatefulWidget {
 
 class _MainHomeScreenState extends State<MainHomeScreen> {
 
-  // List<Marker> myMarker = [];
 
+
+  dynamic todaysDate = DateFormat('dd MMMM yyyy').format(DateTime.now());
+
+
+
+   dynamic todaysWeeklyName = DateFormat('EEEE').format(DateTime.now());
+
+
+  dynamic currentTime = DateFormat.jm().format(DateTime.now());
 
 
   final List<String> imgList = [
@@ -183,7 +191,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                         width: 10,
                                       ),
                                       Text(
-                                        "12:19 AM",
+                                        "${currentTime}",
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w500),
@@ -206,7 +214,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                         width: 10,
                                       ),
                                       Text(
-                                        "31 MAY 2021",
+                                        "${todaysDate}",
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w500),
@@ -264,7 +272,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                               height: 15,
                             ),
                             Text(
-                              "MONDAY",
+                              "${todaysWeeklyName}",
                               style: TextStyle(
                                   fontFamily: "Baloo",
                                   fontSize: 25,

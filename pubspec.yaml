@@ -43,6 +43,7 @@ dependencies:
   flutter_launcher_icons: ^0.9.0
   google_maps_flutter: ^2.0.6
   fl_chart: ^0.36.1
+  intl: ^0.17.0
 #  pie_chart: ^5.0.0
 
 flutter_icons:
