@@ -1,7 +1,10 @@
 import 'dart:async';
+import 'package:diitstudentportal/Screens/Signing_all/LoginPage.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Attendance/Attendance.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Clubs/All_Clubs_list.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/QuestionBank/Question_Bank.dart';
+import 'package:diitstudentportal/Utility/Weather_Info/data_service.dart';
+import 'package:diitstudentportal/Utility/Weather_Info/models.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -20,14 +23,23 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
 
 
+
+
+  @override
+  void initState() {
+    weatherService();
+
+  }
+  late WeatherResponse _response;
+
+  final _dataService = DataService();
+
+
+
   dynamic todaysDate = DateFormat('dd MMMM yyyy').format(DateTime.now());
-
-
-
-   dynamic todaysWeeklyName = DateFormat('EEEE').format(DateTime.now());
-
-
   dynamic currentTime = DateFormat.jm().format(DateTime.now());
+  dynamic todaysWeeklyName = DateFormat('EEEE').format(DateTime.now());
+
 
 
   final List<String> imgList = [
@@ -41,6 +53,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
        appBar: AppBar(
           backgroundColor: Color.fromRGBO(1, 60, 88, 1),
           centerTitle: true,
@@ -88,7 +101,9 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Padding(
+                          if (_response != null)
+
+                            Padding(
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -100,7 +115,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                     children: [
                                       Container(
                                           child: Text(
-                                        "Raining",
+                                        "${_response.weatherInfo.description}",
                                         style: TextStyle(
                                             fontFamily: "azonix",
                                             fontSize: 22,
@@ -169,7 +184,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                         width: 10,
                                       ),
                                       Text(
-                                        "27°C",
+                                        "${(((_response.tempInfo.temperature-32)*5)/9).ceil()}° C",
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w500),
@@ -227,14 +242,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                           ),
                           Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                    child: Image.asset(
-                                  "assets/weather.png",
-                                  height: 60,
-                                  width: 60,
-                                )),
+                              Image.network(_response.iconUrl
                               ),
                             ],
                           )
@@ -493,6 +501,13 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     //
     //   );
     // });
+
+
+
+  void weatherService() async {
+    final response = await _dataService.getWeather("Dhaka");
+    setState(() => _response = response);
+  }
 
 
 
