@@ -1,12 +1,13 @@
 import 'dart:async';
-import 'package:diitstudentportal/Screens/Signing_all/LoginPage.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Attendance/Attendance.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Clubs/All_Clubs_list.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/QuestionBank/Question_Bank.dart';
+import 'package:diitstudentportal/Screens/WebView/NU_Portal.dart';
 import 'package:diitstudentportal/Utility/Weather_Info/data_service.dart';
 import 'package:diitstudentportal/Utility/Weather_Info/models.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
@@ -240,12 +241,11 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                               ],
                             ),
                           ),
-                          Row(
-                            children: [
-                              Image.network(_response.iconUrl
-                              ),
-                            ],
-                          )
+
+                          Image.network(_response.iconUrl,
+
+
+        )
                         ],
                       )),
                 ),
@@ -300,6 +300,10 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
 
 
+
+
+
+
                 Container(
                   margin: EdgeInsets.only(top: 10),
                   child: GFCarousel(
@@ -316,9 +320,114 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   ),
                 ),
 
-                SizedBox(
-                  height: 10,
+                // SizedBox(
+                //   height: 10,
+                // ),
+
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 15, right: 5, top: 10, bottom: 10),
+                        child: MaterialButton(
+                          height: 50.0,
+                          minWidth: 150.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              side: BorderSide(color: Colors.red)),
+                          color: Theme.of(context).primaryColor,
+                          textColor: Colors.white,
+                          child: new Text("NU Portal"),
+                          onPressed: () => {
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>NU_Portal()))
+
+
+                        },
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 5, right: 5, top: 10, bottom: 10),
+                        child: MaterialButton(
+                          height: 50.0,
+                          minWidth: 150.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              side: BorderSide(color: Colors.red)),
+                          color: Theme.of(context).primaryColor,
+                          textColor: Colors.white,
+                          child: new Text("NU Portal"),
+                          onPressed: () => {},
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 5, right: 5, top: 10, bottom: 10),
+                        child: MaterialButton(
+                          height: 50.0,
+                          minWidth: 150.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              side: BorderSide(color: Colors.red)),
+                          color: Theme.of(context).primaryColor,
+                          textColor: Colors.white,
+                          child: new Text("NU Portal"),
+                          onPressed: () => {},
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 5, right: 5, top: 10, bottom: 10),
+                        child: MaterialButton(
+                          height: 50.0,
+                          minWidth: 150.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              side: BorderSide(color: Colors.red)),
+                          color: Theme.of(context).primaryColor,
+                          textColor: Colors.white,
+                          child: new Text("NU Portal"),
+                          onPressed: () => {},
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 5, right: 5, top: 10, bottom: 10),
+                        child: MaterialButton(
+                          height: 50.0,
+                          minWidth: 150.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              side: BorderSide(color: Colors.red)),
+                          color: Theme.of(context).primaryColor,
+                          textColor: Colors.white,
+                          child: new Text("NU Portal"),
+                          onPressed: () => {},
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 5, right: 5, top: 10, bottom: 10),
+                        child: MaterialButton(
+                          height: 50.0,
+                          minWidth: 150.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              side: BorderSide(color: Colors.red)),
+                          color: Theme.of(context).primaryColor,
+                          textColor: Colors.white,
+                          child: new Text("NU Portal"),
+                          onPressed: () => {},
+                        ),
+                      ),
+
+                    ],
+
+                  ),
                 ),
+
 
                 GridView(
 
@@ -468,6 +577,18 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
                     ]                     // List of Widgets
                 ),
+
+
+
+
+
+
+
+
+
+
+
+
 
                 // Container(
                 //   height: 300,

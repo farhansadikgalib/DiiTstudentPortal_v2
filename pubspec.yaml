@@ -45,6 +45,7 @@ dependencies:
   fl_chart: ^0.36.1
   intl: ^0.17.0
   http: ^0.13.3
+  flutter_webview_plugin: ^0.4.0
 #  pie_chart: ^5.0.0
 
 flutter_icons:
