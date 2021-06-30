@@ -1,6 +1,10 @@
+
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class NU_Portal extends StatefulWidget {
   const NU_Portal({Key? key}) : super(key: key);
@@ -11,34 +15,110 @@ class NU_Portal extends StatefulWidget {
 
 class _NU_PortalState extends State<NU_Portal> {
   @override
-  Widget build(BuildContext context) {
-    return WebviewScaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(1, 60, 88, 1),
-        centerTitle: true,
-        title: Shimmer.fromColors(
-          baseColor: Colors.white,
-          highlightColor: Colors.black54,
-          child: Column(
-            children: [
-              Text(
-                'NU Portal',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 22.0,
-                  fontFamily: "Baloo",
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+  void initState() {
+    super.initState();
+    // Enable hybrid composition.
+    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+  }
 
-      url: "https://google.com/",
-    withZoom: true,
-      withLocalStorage: true,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+
+
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            WebView(
+              initialUrl: 'https://diit.edu.bd/',
+            ),
+
+          ],
+
+
+
+        ),
+      )
+
 
     );
   }
+
 }
+
+  //           IconButton(icon: Icon(Icons.arrow_back),
+  //               onPressed: (){
+  //                 flutterWebviewPlugin.goBack();
+  //                 controller.text="";
+  //               }
+  //           ),
+  //           IconButton(icon: Icon(Icons.arrow_forward),
+  //             onPressed: searchURL,),
+  //         ],
+  //       ),
+  //     );
+  //   }
+  // }
+  //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     return WebviewScaffold(
+//       appBar: AppBar(
+//         backgroundColor: Color.fromRGBO(1, 60, 88, 1),
+//         centerTitle: true,
+//         title: Shimmer.fromColors(
+//           baseColor: Colors.white,
+//           highlightColor: Colors.black54,
+//           child: Column(
+//             children: [
+//               Text(
+//                 'NU Portal',
+//                 textAlign: TextAlign.center,
+//                 style: TextStyle(
+//                   fontSize: 22.0,
+//                   fontFamily: "Baloo",
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//
+//       url: "https://google.com/",
+//     withZoom: true,
+//       withLocalStorage: true,
+//
+//     );
+//   }
+// }
