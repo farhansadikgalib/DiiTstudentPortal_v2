@@ -4,7 +4,7 @@ import 'package:diitstudentportal/Utility/Weather_Info/models.dart';
 
 class DataService {
   Future<WeatherResponse> getWeather(String city) async {
-    // api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+    //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
     final queryParameters = {
       'q': city,

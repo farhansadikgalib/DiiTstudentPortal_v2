@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Attendance/Attendance.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/Clubs/All_Clubs_list.dart';
 import 'package:diitstudentportal/Screens/Sub%20Dashboard/QuestionBank/Question_Bank.dart';
+import 'package:diitstudentportal/Screens/WebView/DiiT_Website.dart';
 import 'package:diitstudentportal/Screens/WebView/NU_Portal.dart';
 import 'package:diitstudentportal/Utility/Weather_Info/data_service.dart';
 import 'package:diitstudentportal/Utility/Weather_Info/models.dart';
@@ -9,7 +10,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -31,7 +31,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     weatherService();
 
   }
-  late WeatherResponse _response;
+   late WeatherResponse _response;
 
   final _dataService = DataService();
 
@@ -358,8 +358,12 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                               side: BorderSide(color: Colors.red)),
                           color: Theme.of(context).primaryColor,
                           textColor: Colors.white,
-                          child: new Text("NU Portal"),
-                          onPressed: () => {},
+                          child: new Text("DiiT Website"),
+                          onPressed: () => {
+                            Navigator.push(context,MaterialPageRoute(builder: (context)=>DIITWEBSITE()))
+
+
+                          },
                         ),
                       ),
                       Padding(

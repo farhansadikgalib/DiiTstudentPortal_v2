@@ -25,24 +25,21 @@ class _NU_PortalState extends State<NU_Portal> {
   Widget build(BuildContext context) {
     return Scaffold(
 
+      appBar: AppBar(
+        title: Text("NU Notice"),
+        centerTitle: true,
 
+      ),
 
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            WebView(
-              initialUrl: 'https://diit.edu.bd/',
+      body:
+          Container(
+            margin: EdgeInsets.only(left: 5,right: 5,top: 5),
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: WebView(
+              initialUrl: 'https://www.nu.ac.bd/',
             ),
-
-          ],
-
-
-
-        ),
-      )
-
+          ),
 
     );
   }

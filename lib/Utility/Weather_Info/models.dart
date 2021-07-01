@@ -1,5 +1,3 @@
-
-
 class WeatherInfo {
   final String description;
   final String icon;
