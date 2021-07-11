@@ -28,7 +28,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     weatherService();
   }
 
-  late WeatherResponse _response;
+   WeatherResponse? _response;
 
   final _dataService = DataService();
 
@@ -110,7 +110,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                       children: [
                                         Container(
                                             child: Text(
-                                              "${_response.weatherInfo
+                                              "${_response!.weatherInfo
                                                   .description}",
                                               style: TextStyle(
                                                   fontFamily: "azonix",
@@ -180,7 +180,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                           width: 10,
                                         ),
                                         Text(
-                                          "${(((_response.tempInfo.temperature -
+                                          "${(((_response!.tempInfo.temperature -
                                               32) * 5) / 9).ceil()}° C",
                                           style: TextStyle(
                                               fontSize: 16,
@@ -238,7 +238,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                               ),
                             ),
 
-                          Image.network(_response.iconUrl,
+                          Image.network(_response!.iconUrl,
 
 
                           )

@@ -18,52 +18,50 @@ class _NU_PortalState extends State<NU_Portal> {
   void initState() {
     super.initState();
     // Enable hybrid composition.
-    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+    // if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
 
+    return WebviewScaffold(
+      url: "https://www.nu.ac.bd/",
+      withJavascript: true,
+
+      withZoom: false,
       appBar: AppBar(
-        title: Text("NU Notice"),
+        title: Text("NU Portal"),
         centerTitle: true,
-
-      ),
-
-      body:
-          Container(
-            margin: EdgeInsets.only(left: 5,right: 5,top: 5),
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: WebView(
-              initialUrl: 'https://www.nu.ac.bd/',
-            ),
-          ),
-
-    );
+        ),
+      );
   }
 
-}
-
-  //           IconButton(icon: Icon(Icons.arrow_back),
-  //               onPressed: (){
-  //                 flutterWebviewPlugin.goBack();
-  //                 controller.text="";
-  //               }
-  //           ),
-  //           IconButton(icon: Icon(Icons.arrow_forward),
-  //             onPressed: searchURL,),
-  //         ],
-  //       ),
-  //     );
-  //   }
-  // }
-  //
 
 
 
-
+  }
+//     return Scaffold(
+//
+//       appBar: AppBar(
+//         title: Text("NU Notice"),
+//         centerTitle: true,
+//
+//       ),
+//
+//       body:
+//           Container(
+//             margin: EdgeInsets.only(left: 5,right: 5,top: 5),
+//             height: MediaQuery.of(context).size.height,
+//             width: MediaQuery.of(context).size.width,
+//             child: WebView(
+//               initialUrl: 'https://www.nu.ac.bd/',
+//             ),
+//           ),
+//
+//     );
+//   }
+//
+// }
 
 
 

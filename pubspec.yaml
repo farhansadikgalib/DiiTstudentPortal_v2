@@ -47,6 +47,7 @@ dependencies:
   http: ^0.13.3
   flutter_webview_plugin: ^0.4.0
   webview_flutter: ^2.0.9
+#  swipedetector: ^1.2.0
 #  pie_chart: ^5.0.0
 
 flutter_icons:

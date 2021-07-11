@@ -1,10 +1,7 @@
 import 'dart:async';
-import 'package:diitstudentportal/Screens/Dashboard/DashBoardPage.dart';
-import 'package:diitstudentportal/Screens/Signing_all/ForgetPassPage.dart';
 import 'package:diitstudentportal/Screens/Signing_all/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_ns/liquid_progress_indicator.dart';
-import 'package:shimmer/shimmer.dart';
 
 
 class SplashScreenPage extends StatefulWidget {
@@ -42,7 +39,6 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Image.asset(
-
                     "assets/diit_logo.png",
                   ),
                 )),
