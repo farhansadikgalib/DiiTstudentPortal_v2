@@ -14,6 +14,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Column(
         children: [
           Container(
+            margin: EdgeInsets.only(left: 5,right: 5),
             height: 225,
             width: double.maxFinite,
             decoration: BoxDecoration(
@@ -29,27 +30,67 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             child: Column(
               children:<Widget>[
-                SizedBox(height: 150,),
+                SizedBox(height: 50,),
                 
                 Row(
-
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+
+                      children: [
+                        Text(
+                          "Farhan",style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
+
+                        ),
+                        Text(
+                          "Farhan",style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
+
+                        ),
+                        Text(
+                          "Farhan",style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
+
+                        ),
+                        Text(
+                          "Farhan",style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
+
+                        ),
+                      ],
+                    ),
                     CircleAvatar(
-                      child: Image.asset("assets/ic_club.png"),
+                      child: Image.asset("assets/ic_profile.png",height: 100,width: 100,),
 
                     ),
+
                   ],
-                )
-                
-                
-                
-            
-        ]
+                ),
+
+
+
+
+
+
+
+
+
+              ]
             ),
           ),
         ],
       )
-
 
 
     );
