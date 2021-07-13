@@ -14,15 +14,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Column(
         children: [
           Card(
-            elevation: 10,
+            elevation: 15,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(10),
-                    bottomLeft: Radius.circular(10)),
-                side: BorderSide(width: 5, color: Colors.green)),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(40)),
+                side: BorderSide(width: 2, color: Colors.green)),
 
             child: Container(
-              margin: EdgeInsets.only(left: 5,right: 5),
+              // margin: EdgeInsets.only(left: 5,right: 5),
               height: 225,
               width: double.maxFinite,
               decoration: BoxDecoration(
@@ -31,9 +31,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 //   bottomRight: Radius.circular(40)
                 // ),
                 border: Border.all(
-                  width: 3,
-                  color: Colors.green,
-                  style: BorderStyle.solid,
+                  // width: 3,
+                  // color: Colors.green,
+                  // style: BorderStyle.solid,
                 ),
               ),
               child: Column(
