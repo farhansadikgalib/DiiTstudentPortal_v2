@@ -30,11 +30,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 //   bottomLeft: Radius.circular(40),
                 //   bottomRight: Radius.circular(40)
                 // ),
-                border: Border.all(
-                  // width: 3,
-                  // color: Colors.green,
-                  // style: BorderStyle.solid,
-                ),
+                // border: Border.all(
+                //   // width: 3,
+                //   // color: Colors.green,
+                //   // style: BorderStyle.solid,
+                // ),
               ),
               child: Column(
                 children:<Widget>[
@@ -44,43 +44,51 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
 
-                        children: [
-                          Text(
-                            "Farhan",style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          children: [
+                            Text(
+                              "Farhan",style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w500,
+                            ),
 
-                          ),
-                          Text(
-                            "Farhan",style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
-                          ),
+                            ),
+                            Text(
+                              "Student",style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
 
-                          ),
-                          Text(
-                            "Farhan",style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
-                          ),
+                            ),
+                            Text(
+                              "ID:170138",style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                            ),
 
-                          ),
-                          Text(
-                            "Farhan",style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
-                          ),
+                            ),
+                            Text(
+                              "CGPA: 3.00",style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                            ),
 
-                          ),
-                        ],
+
+
+                            ),
+                          ],
+                        ),
                       ),
-                      CircleAvatar(
-                        child: Image.asset("assets/ic_profile.png",height: 100,width: 100,),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: CircleAvatar(
+                          child: Image.asset("assets/ic_profile.png",height: 100,width: 100,),
 
+                        ),
                       ),
 
                     ],
